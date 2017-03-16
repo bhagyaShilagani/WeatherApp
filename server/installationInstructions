@@ -1,0 +1,23 @@
+** Serve Setup and Installation Instructions
+     on CommandLine
+     Install Node and npm
+     To install Node on your machine, go to https://nodejs.org and click on the Download button
+     check version
+     node -v
+     npm -v
+     npm install express-generator -g
+     express server
+     cd server && npm install 
+     npm install request –save 
+     npm install limiter –save
+ 
+     Download from GitHub to ..\server\ folder
+        app.js: https://github.com/bhagyaShilagani/WeatherApp/blob/master/server/app.js
+        weatherNode.js: https://github.com/bhagyaShilagani/WeatherApp/blob/master/server/weatherNode.js
+
+     npm start
+     
+     Test Server operation using Postman (Download: https://www.getpostman.com/)
+     
+     Make a get request: localhost:3000/forecast?60089
+ 
