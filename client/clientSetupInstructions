@@ -1,0 +1,16 @@
+AngularJS Client Setup and Instructions
+-----------------------------------------
+
+download zip file (weatherApp.zip) to weatherApp folder
+install following node modules under \weatherApp
+npm bower
+npm install -g gulp
+npm install gulp --save-dev
+npm install jshint gulp-jshint jshint-stylish gulp-imagemin gulp-concat gulp-uglify gulp-minify-css gulp-usemin gulp-cache gulp-changed gulp-rev gulp-rename gulp-notify  browser-sync del --save-dev
+bower update
+npm install
+gulp
+npm start  - Start Server before starting client, Server runs on port 3000
+gulp watch - Start Client client runs on the next available ports via bowser-sync (http://localhost:3001/#!/)
+
+(Please see attached word document WeatherAppClientSetup.docx for detailed instructions with screen shots)
