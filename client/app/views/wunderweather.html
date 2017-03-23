@@ -1,0 +1,48 @@
+<div class="container" ng-controller="wunderWeatherController">
+    <div class="row row-content">
+      <form class="navbar-form navbar-left" name="weatherForm" ng-submit="checkWeather()" novalidate>
+        <!-- ZIPCODE -->
+        <div class="form-group" ng-class="{ 'has-error' : weatherForm.zipcode.$invalid && !weatherForm.zipcode.$pristine }">
+            <input type="text" name="zipcode" id="zipcode" placeholder="Enter Zip Code"
+            class="form-control" ng-model="zipcode" ng-minlength="2" ng-maxlength="5" required>
+        </div>
+        <!-- SUBMIT Button -->
+        <button type="submit" class="btn btn-primary" ng-disabled="weatherForm.$invalid">
+          <span class="glyphicon glyphicon-cloud"></span>  Check Weather</button>
+          <div><p ng-show="weatherForm.zipcode.$error.maxlength" class="help-block">Enter a valid 5 digit zipcode.</p></div>
+      </form>
+    </div>
+    <div class="row row-content">
+        <div class="col-xs-12 col-sm-3 col-sm-push-9">
+          <p style="padding:20px;"></p>
+            <img class="img-thumbnail" style="width: 100px;" align=center
+              ng-src="images/weather.png" alt="weather">
+            <h3>Weather App</h3>
+        </div>
+        <div class="col-xs-12 col-sm-9 col-sm-pull-3">
+            <div>
+              <h3>{{message}}</h3>
+            </div>
+            <div class="panel-group" ng-if="showForecast">
+              <div class="row">
+                <div ng-repeat="forecast in forecasts" class="col-sm-3">
+                  <div class="panel panel-default">
+                    <div class="panel-heading" style="background: #004080;">
+                      <p style="color:white; align:center;" >
+                        <strong>{{forecast.date.weekday}}</strong>
+                        <br>{{forecast.date.monthname}} {{forecast.date.day}}, {{forecast.date.year}}
+                        <br><img class="media-object img-thumbnail" ng-src={{forecast.icon_url}}>
+                      </p>
+                    </div>
+                    <div class="panel-body">
+                        <br>{{forecast.conditions}}
+                        <br>High: {{forecast.high.fahrenheit}} &#8457;
+                        <br>Low: {{forecast.low.fahrenheit}} &#8457;
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+        </div>
+    </div>
+</div>

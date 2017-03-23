@@ -1,0 +1,36 @@
+<div class="container">
+    <div class="row row-content">
+        <div class="col-xs-12 col-sm-3 col-sm-push-9">
+          <p style="padding:20px;"></p>
+            <img class="img-thumbnail" style="width: 100px;" align=center
+              ng-src="images/weather.png" alt="weather">
+            <h3>Weather App</h3>
+        </div>
+        <div class="col-xs-12 col-sm-9 col-sm-pull-3">
+            <div ng-if="!showForecast">
+              <h3>Read Me</h3>
+            </div>
+            <div class="panel-group">
+              <div class="row">
+                <div class="col-sm-10">
+                  <div class="panel panel-default">
+                    <div class="panel-heading" style="background: #004080;">
+                      <p style="color:white;">
+                        <strong>Wunderground API</strong>
+                      </p>
+                    </div>
+                    <div class="panel-body">
+                      <p style="padding:10px;">
+                        <br>Wunderground API features require an API key: 6cf104d80bb48fee
+                        <br>URL: https://www.wunderground.com/weather/api/d/docs?d=data/forecast&MR=1
+                        <br>Sample Wunderground Request: http://api.wunderground.com/api/6cf104d80bb48fee/conditions/q/CA/San_Francisco.json
+                        <br>Sample My Weather Request: localhost:3000/forecast?60089
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+        </div>
+    </div>
+</div>
