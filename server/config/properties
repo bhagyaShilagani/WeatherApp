@@ -1,0 +1,5 @@
+var config ={}
+
+config.apiKey ="6cf104d80bb48fee";
+
+module.exports=config;
