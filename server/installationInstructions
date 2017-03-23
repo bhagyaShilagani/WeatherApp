@@ -1,23 +1,46 @@
-** Serve Setup and Installation Instructions
-     on CommandLine
-     Install Node and npm
-     To install Node on your machine, go to https://nodejs.org and click on the Download button
-     check version
+Backend: ** Part I of assignment
+GitHub URL  https://github.com/bhagyaShilagani/WeatherApp/tree/master/server/
+Download
+- app.js
+- weatherNode.js
+- config/properties
+
+
+** Installation Instructions
+1.	Install Node and npm, to install Node on your machine, go to  https://nodejs.org and click on the Download button
+check version
      node -v
      npm -v
-     npm install express-generator -g
-     express server
-     cd server && npm install 
-     npm install request –save 
-     npm install limiter –save
+2.	Install, express-generator and create a server project folder
+-	npm install express-generator -g
+-	express server
+-	cd server && npm install
  
-     Download from GitHub to ..\server\ folder
-        app.js: https://github.com/bhagyaShilagani/WeatherApp/blob/master/server/app.js
-        weatherNode.js: https://github.com/bhagyaShilagani/WeatherApp/blob/master/server/weatherNode.js
+ 
+3.	Install request, node-cache and limiter modules
+npm install request –save (https://www.npmjs.com/package/request)
+npm install limiter –save (https://www.npmjs.com/package/limiter)
+npm install node-cache –save (https://www.npmjs.com/package/node-cache)
+ 
+ 
 
-     npm start
-     
-     Test Server operation using Postman (Download: https://www.getpostman.com/)
-     
-     Make a get request: localhost:3000/forecast?60089
+4.	Copy to files to ..\server\ folder
+- app.js
+- weatherNode.js
+- config/properties
  
+
+5.	Start Server  npm start
+ 
+ 
+6.	Test Server  http://localhost:3010/forecast?60015
+http://localhost:3010/search?60015
+ 
+ 
+7.	Client sends a request  http://localhost:3000/#!/
+ 
+
+8.	Client sends multiple requests
+
+9.   Word Doc with snapshots and detailed instructions.
+https://github.com/bhagyaShilagani/WeatherApp/blob/master/server/BackendSetupInstructions.docx
