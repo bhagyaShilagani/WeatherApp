@@ -69,6 +69,7 @@ Client: ** Installation Instructions
 7.	gulp watch (This Starts Client)
 
 **Note, order in which you should start
+
    a. Server running at http://localhost:3010/
     Word Doc with snapshots and detailed instructions for client Setup.
     https://github.com/bhagyaShilagani/WeatherApp/blob/master/server/BackendSetupInstructions.docx
