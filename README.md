@@ -47,14 +47,17 @@ A Simple AngularJS single page application that connects to the Backend API.
 -Display a three day forecast for the entered zip code.
 -Display a spinning circle over the forecast while waiting for API data to load to give the user some indication that something is happening while you wait for data.
 
-Client Setup on a web server
-1.	Download(weatherApp.zip) and extract files to any local web server. I am using a json-server, copy files into the public folder of a webserver.
+Client: Setup on a web server
+1.	Download zip file (client.zip) from ../bhagyaShilagani/WeatherApp/client/client.zip
+2. 	Extract files to a local web server. I am using a json-server, copy files into the public folder of a webserver.
 2.	To install json-server go to  https://github.com/typicode/json-server
-3.	Start json-server, client can be accessed at http://localhost:3000/#!/
+3.	Start json-server
+	- json-server --watch db.json
+	- client can be accessed at http://localhost:3000/#!/
 4.	Client Weather App shows weather forecast for Zipcode: 60203 as default
 	  
-Client: ** Installation Instructions
-1.	download zip file (weatherApp.zip) from ../bhagyaShilagani/WeatherApp/client/weatherApp.zip
+Client: Setup using Gulp
+1.	Download zip file (weatherApp.zip) from ../bhagyaShilagani/WeatherApp/client/weatherApp.zip
 2.	Extract weatherApp.zip files to ..\weatherApp folder 
 3.	Install following node modules under ..\weatherApp\. Skip this step and goto step 4 if you already have these modules installed
   a.	Install Node and npm, to install Node on your machine, go to  https://nodejs.org and click on the Download button
