@@ -7,13 +7,41 @@
             <h3>Weather App</h3>
         </div>
         <div class="col-xs-12 col-sm-9 col-sm-pull-3">
-            <div ng-if="!showForecast">
-              <h3>Read Me</h3>
-            </div>
             <div class="panel-group">
               <div class="row">
                 <div class="col-sm-10">
                   <div class="panel panel-default">
+                    <div class="panel-heading" style="background: #004080;">
+                      <p style="color:white;">
+                        <strong>Weather App - Client Application</strong>
+                        <br>A Simple AngularJS single page application that connects to the Backend API.
+                      </p>
+                    </div>
+                    <div class="panel-body">
+                      <p style="padding:10px;">
+                        <ol>
+                          <li>Allow a user to enter a zip code.</li>
+                          <li>Display a three day forecast for the entered zip code.</li>
+                          <li>Display a spinning circle over the forecast while waiting for API data to load to give the user some indication that something is happening while you wait for data.</li>
+                        </ol>
+                      </p>
+                    </div>
+                    <div class="panel-heading" style="background: #004080;">
+                      <p style="color:white;">
+                        <strong>Weather App - Backend</strong>
+                        <br>A RESTful API built using Node and Express 4
+                      </p>
+                    </div>
+                    <div class="panel-body">
+                      <p style="padding:10px;">
+                        <ol>
+                          <li>Receive API request from Client Application for zip code. <strong>Example: 60203.</strong></li>
+                          <li>Check stored cache implemented in <strong>node-cache</strong> module for data on 60203 that is less than 1 hour old.</li>
+                          <li>If data is not stale, return's it to the user making the API request.</li>
+                          <li>if data is stale (older than 60 minutes) or non-existent, goes to the wunderground API to get the data, update cache and return's the data.</li>
+                        </ol>
+                      </p>
+                    </div>
                     <div class="panel-heading" style="background: #004080;">
                       <p style="color:white;">
                         <strong>Wunderground API</strong>
@@ -21,10 +49,9 @@
                     </div>
                     <div class="panel-body">
                       <p style="padding:10px;">
-                        <br>Wunderground API features require an API key: 6cf104d80bb48fee
-                        <br>URL: https://www.wunderground.com/weather/api/d/docs?d=data/forecast&MR=1
-                        <br>Sample Wunderground Request: http://api.wunderground.com/api/6cf104d80bb48fee/conditions/q/CA/San_Francisco.json
-                        <br>Sample My Weather Request: localhost:3000/forecast?60089
+                        <br>Wunderground API features require an API key: <strong>6cf104d80bb48fee</strong>
+                        <br><strong> Wunderground API URL: </strong> <a href="https://www.wunderground.com/weather/api/d/docs?d=data/forecast&MR=1">https://www.wunderground.com/weather/api/d/docs?d=data/forecast&MR=1</a>
+                        <br><strong> Sample Wunderground Request: </strong> <a href="http://api.wunderground.com/api/6cf104d80bb48fee/conditions/q/CA/San_Francisco.json"> http://api.wunderground.com/api/6cf104d80bb48fee/conditions/q/CA/San_Francisco.json</a>
                       </p>
                     </div>
                   </div>
